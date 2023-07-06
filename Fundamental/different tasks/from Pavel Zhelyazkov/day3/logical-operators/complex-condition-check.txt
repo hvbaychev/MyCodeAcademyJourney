@@ -1,0 +1,17 @@
+ isLogged | isAdmin | canEdit | Condition 1 | Condition 2 | Condition 3 | Final
+----------+---------+---------+-------------+-------------+-------------+-------
+    0          0         0          0              0             1          1
+    0          0         1          0              1             0          1
+    0          1         0          0              0             1          1
+    0          1         1          0              1             0          1
+    1          0         0          0              1             1          1
+    1          0         1          0              1             0          1
+    1          1         0          0              0             1          1
+    1          1         1          1              1             1          1
+
+
+Condition 1 = isUserLogged && userIsAdmin && userCanEdit 
+Condition 2 = isUserLogged && !userIsAdmin || userCanEdit 
+Condition 3 = isUserLogged && userIsAdmin || !userCanEdit
+
+Final = Always true (does not matter what are input conditions)

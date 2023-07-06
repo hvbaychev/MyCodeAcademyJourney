@@ -1,0 +1,8 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Calculator\\classes\\":["Calculator/classes"],
+            "Calculator\\includes\\":["Calculator/includes"]
+        }
+    }
+}

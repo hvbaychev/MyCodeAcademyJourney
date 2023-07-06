@@ -1,0 +1,26 @@
+#Опитайте се сами да направите html файл и да напишете името си в параграф.
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My HTML file/title>
+</head>
+<body>
+	<p>My name is: [Hristo Baychev]</p>
+</body>
+</html>
+
+
+Опитайте се сами да пресъздадете някоя от примерна програми на php и да я стартирате на вашият компютър.
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My PHP file</title>
+</head>
+<body>
+	<?php
+		echo "Current data and time: " . date("Y-m-d H:i:s");
+	?>
+</body>
+</html>

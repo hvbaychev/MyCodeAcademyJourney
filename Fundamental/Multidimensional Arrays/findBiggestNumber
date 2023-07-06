@@ -1,0 +1,32 @@
+<?php
+
+$matrixArray = [[2, 4 , 5], [2,5,10], [85,77,64]];
+$showMatrix = $matrixArray[2];
+
+//var_dump (max($matrixArray));
+var_dump($showMatrix);
+
+/* matrix = 2  2  85
+            4  5  77
+            5  10 64
+
+we can find the biggest element with function max() (and min() for min)
+Here we found the min element on row:
+array(3) {
+  [0]=>
+  int(2)
+  [1]=>
+  int(4)
+  [2]=>
+  int(5)
+
+if is max: 
+array(3) {
+  [0]=>
+  int(85)
+  [1]=>
+  int(77)
+  [2]=>
+  int(64)
+}
+*/

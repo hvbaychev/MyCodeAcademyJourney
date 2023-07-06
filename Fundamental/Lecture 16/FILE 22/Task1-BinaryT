@@ -1,0 +1,35 @@
+<?php
+
+function generateBinaryTree($depth) {
+    if ($depth === 0) {
+        return null;
+    }
+    $value = rand(1, 100);
+    $left = generateBinaryTree($depth - 1);
+    $right = generateBinaryTree($depth - 1);
+    return ['value' => $value, 'left' => $left, 'right' => $right];
+}
+
+function printBinaryTree($node, $indent = 0) {
+    if ($node === null) {
+        return;
+    }
+    printBinaryTree($node['right'], $indent + 4);
+    echo str_repeat(' ', $indent) . $node['value'] . PHP_EOL;
+    printBinaryTree($node['left'], $indent + 4);
+}
+
+function debugBacktrace($node) {
+    $trace = debug_backtrace();
+    echo 'Backtrace for node with value ' . $node['value'] . PHP_EOL;
+    foreach ($trace as $index => $call) {
+        if (isset($call['file']) && isset($call['line'])) {
+            echo "[$index] " . $call['file'] . " (" . $call['line'] . ")" . PHP_EOL;
+        }
+    }
+}
+
+$tree = generateBinaryTree(3);
+print_r($tree);
+printBinaryTree($tree);
+debugBacktrace($tree['left']['right']);

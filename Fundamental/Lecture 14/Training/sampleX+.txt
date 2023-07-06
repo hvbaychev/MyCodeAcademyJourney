@@ -1,0 +1,10 @@
+Hello, World!
+
+
+Fatal error: Uncaught TypeError: fwrite(): Argument #1 ($stream) must be of type resource, bool given in C:\xampp\htdocs\MyPHP\hristo-baychev-PC01\Lecture 01-04-23\Training\X+.php on line 5
+
+TypeError: fwrite(): Argument #1 ($stream) must be of type resource, bool given in C:\xampp\htdocs\MyPHP\hristo-baychev-PC01\Lecture 01-04-23\Training\X+.php on line 5
+
+Call Stack:
+    0.0054     401440   1. {main}() C:\xampp\htdocs\MyPHP\hristo-baychev-PC01\Lecture 01-04-23\Training\X+.php:0
+    0.0059     401672   2. fwrite($stream = FALSE, $data = 'Hello, World!') C:\xampp\htdocs\MyPHP\hristo-baychev-PC01\Lecture 01-04-23\Training\X+.php:5

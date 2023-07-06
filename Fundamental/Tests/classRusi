@@ -1,0 +1,74 @@
+<?php
+abstract class Product {
+    protected $name;
+    protected $category;
+    protected $price;
+​
+    function __construct($name, $category, $price){
+        $this->name= $name;
+        $this->price= $price;
+    }
+    abstract function getName();
+    abstract function info();
+​
+}
+class Foods extends Product {
+    public $subCategory;
+​
+function __construct($name, $category, $price, $subCategory){
+    parent::__construct($name, $category, $price);
+    $this->subCategory=$subCategory;
+    }
+    function info (){
+        echo "The price of $this->name is $this->price."
+    }
+    function getName (){
+        return $this->name;
+    }
+}
+class Beverage extends Product {
+    public $subCategory;
+​
+    function __construct($name, $category, $price, $subCategory){
+        parent::__construct($name, $category, $price);
+        $this->subCategory=$subCategory;
+    }
+    function info (){
+        echo "The price of $this->name is $this->price."
+    }
+    function getName (){
+        return $this->name;
+    }
+}
+class Home extends Product {
+    public $subCategory;
+​
+    function __construct($name, $category, $price, $subCategory){
+        parent::__construct($name, $category, $price);
+        $this->subCategory=$subCategory;
+    }
+    function info (){
+        echo "The price of $this->name is $this->price."
+    }
+    function getName (){
+        return $this->name;
+    }
+}
+class Cothes extends Product {
+    public $subCategory;
+    public $gender;
+    public $size;
+​
+    function __construct($name, $category, $price, $subCategory, $gender, $size){
+        parent::__construct($name, $category, $price);
+        $this->subCategory=$subCategory;
+        $this->gender=$gender;
+        $this->size=$size;
+    }
+    function info (){
+        echo "The price of $this->name is $this->price."
+    }
+    function getName (){
+        return $this->name;
+    }
+}
